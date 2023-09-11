@@ -15,5 +15,5 @@ spec:
         spec:
           containers:
           - name: cron-archival
-            image: cron-archival:your-tag
+            image: cron-archival:latest
           restartPolicy: OnFailure
