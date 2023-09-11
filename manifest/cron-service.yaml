@@ -2,14 +2,14 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: nginx
-  name: nginx
+    app: my-cronjob
+  name: my-cronjob
   namespace: default
 spec:
   ports:
-  - port: 80
+  - port: 80 # Adjust as per your cronjob container's requirements
     protocol: TCP
-    targetPort: 80
+    targetPort: 80 # Adjust as per your cronjob container's requirements
   selector:
-    app: nginx
-  type: NodePort
+    app: my-cronjob
+  type: ClusterIP
